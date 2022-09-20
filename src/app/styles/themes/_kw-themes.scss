@@ -1,0 +1,32 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+
+// Referencing custom components to use the kwisr theme.
+@use '../../app-theme.component' as app;
+
+@import './kw-palettes';
+
+$kw-typography-config: mat.define-typography-config(
+  $font-family: 'Libre Franklin',
+);
+
+@include mat.core($kw-typography-config);
+
+$kw-primary: mat.define-palette($kw-primary-default, 900, A100, A700);
+$kw-accent: mat.define-palette($kw-secondary-default, 800, 500, 900);
+$kw-warn: mat.define-palette(mat.$red-palette);
+
+$kw-theme: mat.define-light-theme((
+  color: (
+    primary: $kw-primary,
+    accent: $kw-accent,
+    warn: $kw-warn,
+  )
+));
+
+@include mat.all-component-themes($kw-theme);
+
+// Including the kwisr theme to custom components.
+@include app.theme($kw-theme);
