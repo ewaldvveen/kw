@@ -1,3 +1,7 @@
+////////////////////////
+/// Global styles
+//////////////////////
+
 * {
   box-sizing: border-box;
 };
@@ -9,3 +13,16 @@ html, body {
 body {
   margin: 0;
 };
+
+
+////////////////////////
+/// Global mixins
+//////////////////////
+
+@mixin g-hide-element {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px; width: 1px;
+  margin: -1px; padding: 0; border: 0;
+}

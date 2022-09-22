@@ -1,0 +1,5 @@
+@import 'general';
+
+h1 {
+  @include g-hide-element;
+}
