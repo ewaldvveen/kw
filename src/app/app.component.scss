@@ -1,4 +1,21 @@
+@import 'typography';
+
 .container {
+  @include g-typography__defaults;
   width: 100vw;
+}
+
+.full-page-mobile {
   height: 100vh;
+}
+
+
+////////////////////////
+/// Media queries
+//////////////////////
+
+@media (min-width: 768px) {
+  .full-page-mobile {
+    height: initial;
+  }
 }

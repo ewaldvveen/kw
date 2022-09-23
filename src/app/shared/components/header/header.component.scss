@@ -1,5 +1,11 @@
 @import 'general';
+@import 'typography';
 
 h1 {
   @include g-hide-element;
+}
+
+.header-toolbar {
+  @include g-typography__defaults;
+  justify-content: space-between;
 }

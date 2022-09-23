@@ -5,6 +5,8 @@
 
 // Referencing custom components to use the kwisr theme.
 @use '../../app-theme.component' as app;
+@use '../../shared/components/header/header.theme.component' as header;
+@use '../../shared/components/footer/footer.theme.component' as footer;
 
 @import './kw-palettes';
 
@@ -30,3 +32,5 @@ $kw-theme: mat.define-light-theme((
 
 // Including the kwisr theme to custom components.
 @include app.theme($kw-theme);
+@include header.theme($kw-theme);
+@include footer.theme($kw-theme);

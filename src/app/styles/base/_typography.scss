@@ -1,3 +1,12 @@
+////////////////////////
+/// Global mixins
+//////////////////////
+
+@mixin g-typography__defaults {
+  font-size: 1.8rem;
+  color: hsla(0, 0%, 13%, 1);
+}
+
 @mixin g-typography__headings {
   font-family: 'Libre Baskerville', serif;
 }

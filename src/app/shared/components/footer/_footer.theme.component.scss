@@ -6,10 +6,12 @@
 
   $primary-palette: map.get($color-config, 'primary');
 
-  $kw-orange: mat.get-color-from-palette($primary-palette, 900);
+  $kw-grey-dark: mat.get-color-from-palette($primary-palette, 50-contrast);
+  $kw-grey-light: mat.get-color-from-palette($primary-palette, 800-contrast);
 
-  .container {
-    background-color: $kw-orange;
+  .footer {
+    background-color: $kw-grey-dark;
+    color: $kw-grey-light;
   }
 }
 
