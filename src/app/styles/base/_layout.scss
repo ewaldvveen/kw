@@ -1,0 +1,15 @@
+@mixin g-flex-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+@mixin g-flex-wrapper-alt {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+
+@mixin g-section {
+  padding: 1.5rem 1rem;
+}

@@ -1,0 +1,40 @@
+@import 'layout';
+@import 'typography';
+
+.wrapper {
+  @include g-flex-wrapper;
+  justify-content: space-between;
+  column-gap: 1.4rem;
+}
+
+.wrapper-alt {
+  @include g-flex-wrapper-alt;
+  max-width: 55vw;
+}
+
+
+.heading {
+  @include g-typography__headings;
+}
+
+#list-item {
+  margin: 2rem 0;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.list {
+  &-item {
+    &__heading {
+      margin: 0;
+    }
+
+    &__price {
+      border-radius: 4px;
+      padding: 0.5rem 1rem;
+      margin-left: 0.5rem;
+    }
+  }
+}

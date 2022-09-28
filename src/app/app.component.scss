@@ -1,3 +1,4 @@
+@import 'layout';
 @import 'typography';
 
 .container {
@@ -7,6 +8,10 @@
 
 .full-page-mobile {
   height: 100vh;
+}
+
+.section {
+  @include g-section;
 }
 
 

@@ -11,6 +11,7 @@ import { MenuComponent } from './components/menu/menu.component';
     MenuComponent
   ],
   exports: [
+    MaterialModule,
     FooterComponent,
     HeaderComponent
   ],

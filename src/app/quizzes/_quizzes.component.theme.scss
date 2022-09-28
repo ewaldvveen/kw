@@ -7,17 +7,24 @@
   $primary-palette: map.get($color-config, 'primary');
 
   $kw-orange: mat.get-color-from-palette($primary-palette, 800);
+  $kw-orange-dark: mat.get-color-from-palette($primary-palette, 900);
   $kw-grey-dark: mat.get-color-from-palette($primary-palette, 50-contrast);
+  $kw-grey-light: mat.get-color-from-palette($primary-palette, 800-contrast);
 
-  ////////////////////////
-  /// Global styles
-  //////////////////////
+  .card {
+    background-color: $kw-orange-dark;
+  }
 
-  .kw-anchor-light-bgr {
+  #list-item {
     color: $kw-grey-dark;
+  }
 
-    &:hover, &:focus {
-      color: $kw-orange;
+  .list {
+    &-item {
+      &__price {
+        background-color: $kw-orange;
+        border: 1px solid $kw-grey-light;
+      }
     }
   }
 }

@@ -9,6 +9,7 @@
 @use '../../shared/components/header/header.theme.component' as header;
 @use '../../shared/components/menu/menu.component.theme' as menu;
 @use '../../shared/components/footer/footer.theme.component' as footer;
+@use '../../quizzes/quizzes.component.theme' as quizzes;
 
 @import './kw-palettes';
 
@@ -38,3 +39,4 @@ $kw-theme: mat.define-light-theme((
 @include header.theme($kw-theme);
 @include menu.theme($kw-theme);
 @include footer.theme($kw-theme);
+@include quizzes.theme($kw-theme);
