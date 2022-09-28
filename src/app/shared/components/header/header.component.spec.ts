@@ -25,8 +25,8 @@ describe('HeaderComponent', () => {
 
   describe('HTML elements', () => {
     it('should contain an h1-element with the title of the application', () => {
-      const titleDebugElement: DebugElement = fixture.debugElement;
-      const h1DebugElement = titleDebugElement.query(By.css('h1'));
+      const debugElement: DebugElement = fixture.debugElement;
+      const h1DebugElement = debugElement.query(By.css('h1'));
       const h1Element: HTMLElement = h1DebugElement.nativeElement;
 
       expect(h1Element).toBeDefined();
@@ -34,11 +34,19 @@ describe('HeaderComponent', () => {
     });
 
     it('should contain a logo', () => {
-      const logoDebugElement: DebugElement = fixture.debugElement;
-      const svgDebugElement = logoDebugElement.query(By.css('svg'));
+      const debugElement: DebugElement = fixture.debugElement;
+      const svgDebugElement = debugElement.query(By.css('svg'));
       const svgElement: HTMLElement = svgDebugElement.nativeElement;
 
       expect(svgElement).toBeDefined();
+    });
+
+    it('should contain a menu', () => {
+      const debugElement: DebugElement = fixture.debugElement;
+      const menuDebugElement = debugElement.query(By.css('kw-menu'));
+      const menuElement: HTMLElement = menuDebugElement.nativeElement;
+
+      expect(menuElement).toBeDefined();
     });
   })
 });

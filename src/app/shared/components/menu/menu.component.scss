@@ -1,0 +1,99 @@
+@import 'general';
+
+.menu {
+  position: fixed;
+  display: none;
+  right: -100vw;
+  top: 0;
+  height: 100%;
+  overflow-x: visible;
+  overflow-y: auto;
+  transition: left 0.3s ease;
+  z-index: 999;
+
+  &:target {
+    display: block;
+    right: 0;
+    outline: none;
+  }
+
+  &__close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 32px;
+    margin: 2rem;
+  }
+}
+
+.menu:target .list  {
+  position: relative;
+  z-index: 1000;
+}
+
+.menu:target .menu__close {
+  z-index: 1001;
+}
+
+.menu:target + .backdrop {
+  position: fixed;
+  display: block;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 998;
+  cursor: default;
+}
+
+.list {
+  @include g-list;
+  @include g-flex-wrapper-alt;
+  align-items: center;
+  row-gap: 2rem;
+  min-height: 100%;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+
+  &-item__link {
+    @include g-anchor;
+    display: block;
+    padding: 0.75em;
+  }
+}
+
+
+////////////////////////
+/// Overriding Angular Material styles
+//////////////////////
+
+.mat-icon {
+  width: 32px;
+  height: 32px;
+  font-size: 32px;
+}
+
+
+////////////////////////
+/// Media queries
+//////////////////////
+
+@media (min-width: 768px) {
+  .menu {
+    position: static;
+    display: block;
+
+    &__close {
+      display: none;
+    }
+  }
+
+  .list {
+    @include g-flex-wrapper;
+    height: auto;
+    width: auto;
+    padding: 0;
+    overflow: hidden;
+  }
+}

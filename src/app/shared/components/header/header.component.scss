@@ -2,7 +2,11 @@
 @import 'typography';
 
 h1 {
-  @include g-hide-element;
+  @include g-screen-reader-only;
+}
+
+.wrapper {
+  @include g-flex-wrapper;
 }
 
 .header-toolbar {
@@ -13,12 +17,24 @@ h1 {
 .logo {
   width: 4.8rem;
   height: auto;
+}
 
-  &-wrapper {
-    @include g-flex-wrapper;
+.menu {
+  &-toggle {
+    height: 32px;
   }
 }
 
+
+////////////////////////
+/// Overriding Angular Material styles
+//////////////////////
+
+.mat-icon {
+  width: 32px;
+  height: 32px;
+  font-size: 32px;
+}
 
 
 ////////////////////////
@@ -27,6 +43,24 @@ h1 {
 
 @media (min-width: 600px) {
   .logo {
-    width: 6rem;
+    width: 5.4rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .header-toolbar {
+    height: auto;
+  }
+
+  .logo {
+    &-wrapper {
+      margin: 1rem 0;
+    }
+  }
+
+  .menu {
+    &-toggle {
+      display: none;
+    }
   }
 }

@@ -11,30 +11,16 @@
   $kw-grey-light: mat.get-color-from-palette($primary-palette, 800-contrast);
   $kw-grey-dark: mat.get-color-from-palette($primary-palette, 50-contrast);
 
-  .header-toolbar {
-    background-color: $kw-grey-light;
-  }
+  ////////////////////////
+  /// Global styles
+  //////////////////////
 
-  #circle-medium {
-    fill: $kw-orange-dark;
-  }
+  .kw-anchor-light-bgr {
+    color: $kw-grey-dark;
 
-  #circle-small {
-    fill: $kw-orange;
-    stroke: $kw-grey-light;
-  }
-
-  #circle-large, #text-name {
-    fill: $kw-grey-light;
-  }
-
-  #text-name-background, #text-year {
-    fill: $kw-grey-dark;
-  }
-
-  #line-under, #line-above {
-    fill: $kw-grey-light;
-    stroke: $kw-grey-light;
+    &:hover, &:focus {
+      color: $kw-orange;
+    }
   }
 }
 

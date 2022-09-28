@@ -20,16 +20,37 @@ body {
 /// Global mixins
 //////////////////////
 
-@mixin g-hide-element {
+@mixin g-screen-reader-only {
   position: absolute;
   overflow: hidden;
   clip: rect(0 0 0 0);
-  height: 1px; width: 1px;
-  margin: -1px; padding: 0; border: 0;
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
 }
 
 @mixin g-flex-wrapper {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
+}
+
+@mixin g-flex-wrapper-alt {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+
+@mixin g-anchor {
+  text-decoration: none;
+
+  &:hover, &:active {
+    text-decoration: underline;
+  }
+}
+
+@mixin g-list {
+  list-style: none;
 }
