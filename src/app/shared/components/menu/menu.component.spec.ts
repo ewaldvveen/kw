@@ -1,20 +1,27 @@
+import { HarnessLoader } from '@angular/cdk/testing';
+import { TestbedHarnessEnvironment } from '@angular/cdk/testing/testbed';
+import { MatIconHarness } from '@angular/material/icon/testing';
 import { DebugElement } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 
 import { MenuComponent } from './menu.component';
+import { SharedModule } from '../../shared.module';
 
 describe('MenuComponent', () => {
+  let loader: HarnessLoader;
   let component: MenuComponent;
   let fixture: ComponentFixture<MenuComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports: [ SharedModule ],
       declarations: [ MenuComponent ]
     })
     .compileComponents();
 
     fixture = TestBed.createComponent(MenuComponent);
+    loader = TestbedHarnessEnvironment.loader(fixture);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -45,6 +52,15 @@ describe('MenuComponent', () => {
       const listItemElement = debugElement.nativeElement.querySelectorAll('li');
 
       expect(listItemElement.length).toBeGreaterThan(0);
+    });
+  });
+
+  describe('Material elements', () => {
+    it('should contain a close mat-icon', async () => {
+      const iconHarness = await loader.getHarness<MatIconHarness>(MatIconHarness);
+      const icon = await iconHarness.getName();
+
+      expect(icon).toEqual('close');
     });
   });
 });
