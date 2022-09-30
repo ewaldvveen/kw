@@ -3,8 +3,7 @@
 
 .wrapper {
   @include g-flex-wrapper;
-  justify-content: space-between;
-  column-gap: 1.4rem;
+  column-gap: 0.5rem;
 }
 
 .wrapper-alt {
@@ -12,9 +11,12 @@
   max-width: 55vw;
 }
 
-
 .heading {
   @include g-typography__headings;
+}
+
+.page-heading {
+  @include g-typography__heading--page;
 }
 
 #list-item {
