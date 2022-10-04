@@ -49,7 +49,7 @@
 
 .list {
   @include g-list;
-  @include g-flex-wrapper-alt;
+  @include g-flex-wrapper;
   align-items: center;
   row-gap: 2rem;
   min-height: 100%;
@@ -91,7 +91,7 @@
   }
 
   .list {
-    @include g-flex-wrapper;
+    @include g-flex-wrapper-alt;
     height: auto;
     width: auto;
     padding: 0;

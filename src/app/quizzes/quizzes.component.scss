@@ -3,12 +3,16 @@
 
 .wrapper {
   @include g-flex-wrapper;
-  column-gap: 0.5rem;
+  row-gap: 2rem;
+
+  &--small {
+    max-width: 55vw;
+  }
 }
 
 .wrapper-alt {
   @include g-flex-wrapper-alt;
-  max-width: 55vw;
+  column-gap: 0.5rem;
 }
 
 .heading {
@@ -17,6 +21,16 @@
 
 .page-heading {
   @include g-typography__heading--page;
+}
+
+.card {
+  max-width: 320px;
+
+  &__actions {
+    @include g-flex-wrapper-alt;
+    justify-content: flex-end;
+    column-gap: 1.2rem;
+  }
 }
 
 #list-item {

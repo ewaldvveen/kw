@@ -1,7 +1,7 @@
 <h2 class="mat-h2 heading page-heading">
   Alle kwissen op een rijtje
 </h2>
-<h3 class="mat-h3 heading wrapper">
+<h3 class="mat-h3 heading wrapper-alt">
   <mat-icon
     aria-hidden="false"
     aria-label="New releases icon"
@@ -9,44 +9,33 @@
   </mat-icon>
   <span>De nieuwste kwissen</span>
 </h3>
-<h3 class="mat-h3 heading wrapper">
-  <mat-icon
-    aria-hidden="false"
-    aria-label="Event icon"
-    fontIcon="event">
-  </mat-icon>
-  <span>Aankomende kwissen</span>
-</h3>
-<h3 class="mat-h3 heading wrapper">
-  <mat-icon
-    aria-hidden="false"
-    aria-label="Apps icon"
-    fontIcon="apps">
-  </mat-icon>
-  <span>Alle beschikbare kwissen</span>
-</h3>
-<mat-card class="card">
-  <mat-card-content>
-    <mat-selection-list [multiple]="false">
-      <mat-list-option
-        *ngFor="let quiz of quizzes"
-        (click)="selectQuiz(quiz)"
-        id="list-item">
-        <div class="wrapper">
-          <div class="wrapper-alt">
-            <h3 class="mat-h3 list-item__heading" mat-line>
-              {{ quiz.title }}
-            </h3>
-            <p mat-line>
-              {{ quiz.description }}
-            </p>
-          </div>
-          <span class="list-item__price">
-            {{ quiz.price | currency:'EUR':'code' }}
-          </span>
-        </div>
-        <mat-divider></mat-divider>
-      </mat-list-option>
-    </mat-selection-list>
-  </mat-card-content>
-</mat-card>
+<div class="wrapper">
+  <mat-card *ngFor="let newQuiz of quizzes" class="card">
+    <mat-card-header>
+      <mat-card-title>{{ newQuiz.title }}</mat-card-title>
+      <mat-card-subtitle>{{ newQuiz.category }}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+      <p>
+        {{ newQuiz.description }}
+      </p>
+    </mat-card-content>
+    <mat-card-actions class="card__actions">
+      <button mat-mini-fab color="accent">
+        <mat-icon
+          aria-hidden="false"
+          aria-label="Shopping cart icon"
+          fontIcon="shopping_cart">
+        </mat-icon>
+      </button>
+      <button mat-mini-fab color="accent">
+        <mat-icon
+          aria-hidden="false"
+          aria-label="Explanation icon"
+          fontIcon="question_mark">
+        </mat-icon>
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>

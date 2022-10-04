@@ -47,11 +47,5 @@ describe('QuizzesComponent', () => {
 
       expect(card).toBeDefined();
     });
-
-    it('should contain a mat-selection-list with single selection', async () => {
-      const card = await loader.getHarness<MatSelectionListHarness>(MatSelectionListHarness);
-
-      expect(card).toBeDefined();
-    });
   });
 });

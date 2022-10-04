@@ -1,12 +1,12 @@
 @mixin g-flex-wrapper {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: column nowrap;
   align-items: center;
 }
 
 @mixin g-flex-wrapper-alt {
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: row nowrap;
   justify-content: center;
 }
 
