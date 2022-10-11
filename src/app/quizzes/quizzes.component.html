@@ -11,12 +11,12 @@
 </h3>
 <div class="wrapper">
   <mat-card *ngFor="let newQuiz of quizzes" class="card">
-    <mat-card-header>
-      <mat-card-title>{{ newQuiz.title }}</mat-card-title>
-      <mat-card-subtitle>{{ newQuiz.category }}</mat-card-subtitle>
-    </mat-card-header>
     <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-    <mat-card-content>
+    <mat-card-header>
+      <mat-card-subtitle>{{ newQuiz.category }}</mat-card-subtitle>
+      <mat-card-title>{{ newQuiz.title }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="card__content">
       <p>
         {{ newQuiz.description }}
       </p>

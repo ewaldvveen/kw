@@ -1,9 +1,15 @@
 @import 'layout';
 @import 'typography';
+@import 'variables';
 
 .wrapper {
-  @include g-flex-wrapper;
-  row-gap: 2rem;
+  // @include g-flex-wrapper;
+  // gap: 2rem;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  place-items: center;
 
   &--small {
     max-width: 55vw;
@@ -24,12 +30,18 @@
 }
 
 .card {
-  max-width: 320px;
+  max-width: var(--kw-card-width);
+
+  &__content {
+    margin: 0 1.6rem 1.6rem 1.6rem;
+  }
 
   &__actions {
     @include g-flex-wrapper-alt;
     justify-content: flex-end;
     column-gap: 1.2rem;
+    margin-left: initial;
+    margin-right: initial;
   }
 }
 
@@ -52,5 +64,32 @@
       padding: 0.5rem 1rem;
       margin-left: 0.5rem;
     }
+  }
+}
+
+
+////////////////////////
+/// Overriding default Angular Material styles
+//////////////////////
+
+.mat-card>.mat-card-actions:last-child {
+  margin-bottom: initial;
+}
+
+
+////////////////////////
+/// Media queries
+//////////////////////
+
+@media (min-width: $kw-tablet-regular) {
+  .wrapper {
+    grid-template-columns: repeat(2, minmax(10px, var(--kw-card-width)));
+    justify-content: center;
+  }
+}
+
+@media (min-width: $kw-tablet-large) {
+  .wrapper {
+    grid-template-columns: repeat(3, minmax(10px, var(--kw-card-width)));
   }
 }

@@ -17,7 +17,7 @@ export class QuizzesComponent {
     },
     {
       id: 2,
-      title: 'Speciale editie januari 2023',
+      title: 'Muziekkwis januari 2023',
       description: '60 muziekvragen, verdeeld over 6 rondes.',
       category: 'thema',
       releaseDate: '15 januari 2023',
@@ -30,6 +30,14 @@ export class QuizzesComponent {
       category: 'standaard',
       releaseDate: '1 februari 2023',
       price: '1.99'
+    },
+    {
+      id: 4,
+      title: 'Sportkwis februari 2023',
+      description: '60 vragen, verdeeld over 6 rondes over sport.',
+      category: 'thema',
+      releaseDate: '15 februari 2023',
+      price: '2.99'
     },
   ];
 

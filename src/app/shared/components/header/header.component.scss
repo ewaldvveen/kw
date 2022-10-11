@@ -1,6 +1,7 @@
 @import 'general';
 @import 'layout';
 @import 'typography';
+@import 'variables';
 
 h1 {
   @include g-screen-reader-only;
@@ -42,13 +43,13 @@ h1 {
 /// Media queries
 //////////////////////
 
-@media (min-width: 600px) {
+@media (min-width: $kw-phone-large) {
   .logo {
     width: 5.4rem;
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: $kw-tablet-regular) {
   .header-toolbar {
     height: auto;
   }

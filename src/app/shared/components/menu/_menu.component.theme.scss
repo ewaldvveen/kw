@@ -1,6 +1,8 @@
 @use 'sass:map';
 @use '@angular/material' as mat;
 
+@import 'variables';
+
 @mixin color($theme) {
   $color-config: mat.get-color-config($theme);
 
@@ -26,7 +28,7 @@
   /// Media queries
   //////////////////////
 
-  @media (min-width: 768px) {
+  @media (min-width: $kw-tablet-regular) {
     .list {
       background: none;
     }

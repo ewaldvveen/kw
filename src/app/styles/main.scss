@@ -1,7 +1,10 @@
 // Base styling
 @import 'base/general';
+@import 'base/general.theme';
+@import 'base/layout';
 @import 'base/normalize';
 @import 'base/typography';
+@import 'base/variables';
 
 // This file includes all the global scss-files.
 @import 'themes/kw-themes';

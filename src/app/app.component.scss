@@ -1,5 +1,6 @@
 @import 'layout';
 @import 'typography';
+@import 'variables';
 
 .container {
   @include g-typography__defaults;
@@ -19,7 +20,7 @@
 /// Media queries
 //////////////////////
 
-@media (min-width: 768px) {
+@media (min-width: $kw-tablet-regular) {
   .full-page-mobile {
     height: initial;
   }
