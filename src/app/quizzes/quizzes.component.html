@@ -1,41 +1,51 @@
-<h2 class="mat-h2 heading page-heading">
-  Alle kwissen op een rijtje
-</h2>
-<h3 class="mat-h3 heading wrapper-alt">
-  <mat-icon
-    aria-hidden="false"
-    aria-label="New releases icon"
-    fontIcon="new_releases">
-  </mat-icon>
-  <span>De nieuwste kwissen</span>
-</h3>
-<div class="wrapper">
-  <mat-card *ngFor="let newQuiz of quizzes" class="card">
-    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-    <mat-card-header>
-      <mat-card-subtitle>{{ newQuiz.category }}</mat-card-subtitle>
-      <mat-card-title>{{ newQuiz.title }}</mat-card-title>
-    </mat-card-header>
-    <mat-card-content class="card__content">
-      <p>
-        {{ newQuiz.description }}
-      </p>
-    </mat-card-content>
-    <mat-card-actions class="card__actions">
-      <button mat-mini-fab color="accent">
-        <mat-icon
-          aria-hidden="false"
-          aria-label="Shopping cart icon"
-          fontIcon="shopping_cart">
-        </mat-icon>
-      </button>
-      <button mat-mini-fab color="accent">
-        <mat-icon
-          aria-hidden="false"
-          aria-label="Explanation icon"
-          fontIcon="question_mark">
-        </mat-icon>
-      </button>
-    </mat-card-actions>
-  </mat-card>
-</div>
+<header>
+  <kw-header></kw-header>
+</header>
+<main>
+  <section class="section">
+    <h2 class="mat-h2 heading page-heading">
+      Alle kwissen op een rijtje
+    </h2>
+    <h3 class="mat-h3 heading wrapper-alt">
+      <mat-icon
+        aria-hidden="false"
+        aria-label="New releases icon"
+        fontIcon="new_releases">
+      </mat-icon>
+      <span>De nieuwste kwissen</span>
+    </h3>
+    <div class="wrapper">
+      <mat-card *ngFor="let newQuiz of quizzes" class="card">
+        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+        <mat-card-header>
+          <mat-card-subtitle>{{ newQuiz.category }}</mat-card-subtitle>
+          <mat-card-title>{{ newQuiz.title }}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="card__content">
+          <p>
+            {{ newQuiz.description }}
+          </p>
+        </mat-card-content>
+        <mat-card-actions class="card__actions">
+          <button mat-mini-fab color="accent">
+            <mat-icon
+              aria-hidden="false"
+              aria-label="Shopping cart icon"
+              fontIcon="shopping_cart">
+            </mat-icon>
+          </button>
+          <button mat-mini-fab color="accent">
+            <mat-icon
+              aria-hidden="false"
+              aria-label="Explanation icon"
+              fontIcon="question_mark">
+            </mat-icon>
+          </button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </section>
+</main>
+<footer>
+  <kw-footer></kw-footer>
+</footer>

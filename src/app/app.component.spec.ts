@@ -26,28 +26,12 @@ describe('AppComponent', () => {
   });
 
   describe('HTML elements', () => {
-    it('should contain a header element', () => {
+    it('should contain a router-outlet element', () => {
       const debugElement: DebugElement = fixture.debugElement;
-      const headerDebugElement = debugElement.query(By.css('header'));
-      const headerElement: HTMLElement = headerDebugElement.nativeElement;
-
-      expect(headerElement).toBeDefined();
-    });
-
-    it('should contain a main element', () => {
-      const debugElement: DebugElement = fixture.debugElement;
-      const mainDebugElement = debugElement.query(By.css('main'));
+      const mainDebugElement = debugElement.query(By.css('router-outlet'));
       const mainElement: HTMLElement = mainDebugElement.nativeElement;
 
       expect(mainElement).toBeDefined();
-    });
-
-    it('should contain a footer element', () => {
-      const debugElement: DebugElement = fixture.debugElement;
-      const footerDebugElement = debugElement.query(By.css('footer'));
-      const footerElement: HTMLElement = footerDebugElement.nativeElement;
-
-      expect(footerElement).toBeDefined();
     });
   });
 });
