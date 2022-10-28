@@ -19,7 +19,19 @@
     </a>
   </div>
   <div class="wrapper">
-    <div class="button-wrapper">
+    <a
+    href="#main-menu"
+    id="main-menu-toggle"
+    class="kw-anchor-light-bgr menu-toggle"
+    aria-label="Open main menu">
+    <mat-icon
+      aria-hidden="true"
+      aria-label="Hamburger menu icon"
+      fontIcon="menu">
+    </mat-icon>
+  </a>
+  <kw-menu></kw-menu>
+    <!-- <div class="button-wrapper">
       <button [routerLink]="['/login']" mat-raised-button color="accent">
         <span class="icon-button">
           <span>
@@ -47,6 +59,6 @@
         </mat-icon>
       </a>
       <kw-menu></kw-menu>
-  </div>
+  </div> -->
 </div>
 </mat-toolbar>
