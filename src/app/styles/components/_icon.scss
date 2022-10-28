@@ -9,7 +9,13 @@
 }
 
 @mixin g-icon--large {
-  font-size: 26px;
-  width: 26px;
-  height: 26px;
+  font-size: 32px;
+  width: 32px;
+  height: 32px;
+}
+
+@mixin g-icon--xlarge {
+  font-size: 48px;
+  width: 48px;
+  height: 48px;
 }

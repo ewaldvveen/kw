@@ -6,13 +6,12 @@
 @import 'icon';
 
 .mat-icon.icon {
-  @include g-icon--large;
+  @include g-icon--xlarge;
 }
 
 .icon {
   &-link {
-    @include g-button__icon;
-    @include g-typography--large;
+    @include g-button__icon--stacked;
   }
 }
 
@@ -73,11 +72,19 @@
   margin: 0;
   padding: 0;
 
-  &-item__link {
-    @include g-anchor;
-    display: block;
-    padding: 0.75em;
+  &-item {
+    width: 66%;
+
+    &__link {
+      @include g-anchor;
+      display: block;
+      padding: 0.75em;
+    }
   }
+}
+
+.last-child > .divider {
+  display: none;
 }
 
 
@@ -86,9 +93,7 @@
 //////////////////////
 
 .mat-icon {
-  width: 32px;
-  height: 32px;
-  font-size: 32px;
+  @include g-icon--large;
 }
 
 
@@ -98,8 +103,41 @@
 
 @media (min-width: $kw-tablet-regular) {
   .menu {
+    box-shadow: -6px 0px 20px 0px hsla(0, 0%, 13%, 1);
+  }
+
+  .menu:target + .backdrop {
+    backdrop-filter: blur(5px);
+  }
+
+  .list {
+    width: 45vw;
+    justify-content: start;
+    padding-top: 12rem;
+
+    &-item {
+      &__link {
+        padding: 3rem 0.75em;
+      }
+    }
+  }
+}
+
+@media (min-width: $kw-tablet-large) {
+  .mat-icon.icon {
+    @include g-icon--default;
+  }
+
+  .icon {
+    &-link {
+      @include g-button__icon;
+    }
+  }
+
+  .menu {
     position: static;
     display: block;
+    box-shadow: none;
 
     &__close {
       display: none;
@@ -112,5 +150,9 @@
     width: auto;
     padding: 0;
     overflow: hidden;
+  }
+
+  .divider {
+    display: none;
   }
 }

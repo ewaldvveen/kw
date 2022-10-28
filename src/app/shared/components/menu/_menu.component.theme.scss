@@ -23,12 +23,30 @@
     background-color: $kw-grey-light;
   }
 
+  .divider {
+    border-top-color: $kw-grey-light;
+  }
+
 
   ////////////////////////
   /// Media queries
   //////////////////////
 
   @media (min-width: $kw-tablet-regular) {
+    .menu {
+      box-shadow: $kw-grey-light;
+    }
+
+    .menu:target + .backdrop {
+      background-color: initial;
+    }
+  }
+
+  @media (min-width: $kw-tablet-large) {
+    .menu {
+      box-shadow: initial;
+    }
+
     .list {
       background: none;
     }

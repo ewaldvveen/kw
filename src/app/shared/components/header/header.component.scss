@@ -15,11 +15,13 @@ h1 {
 
 .header-toolbar {
   @include g-typography--default;
+  height: auto;
   justify-content: space-between;
+  padding: 2.4rem 1.6rem 1.6rem;
 }
 
 .logo {
-  width: 4.8rem;
+  width: 6.4rem;
   height: auto;
 }
 
@@ -60,15 +62,13 @@ h1 {
 /// Media queries
 //////////////////////
 
-@media (min-width: $kw-phone-large) {
-  .logo {
-    width: 5.4rem;
-  }
-}
-
 @media (min-width: $kw-tablet-regular) {
+  .logo {
+    width: 9.6rem;
+  }
+
   .header-toolbar {
-    height: auto;
+    padding: 0 2.4rem 0;
   }
 
   .logo {
@@ -76,7 +76,9 @@ h1 {
       margin: 1rem 0;
     }
   }
+}
 
+@media (min-width: $kw-tablet-large) {
   .menu {
     &-toggle {
       display: none;

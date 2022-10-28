@@ -8,3 +8,10 @@
   place-items: center;
   gap: 0.5rem;
 }
+
+@mixin g-button__icon--stacked {
+  display: flex;
+  flex-flow: column nowrap;
+  place-items: center;
+  gap: 0.5rem;
+}
