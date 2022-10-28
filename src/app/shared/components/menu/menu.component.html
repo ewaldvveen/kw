@@ -10,24 +10,19 @@
   </mat-icon>
   </a>
   <ul class="list">
-    <li>
-      <a [routerLink]="['/quizzes']" class="kw-anchor-light-bgr list-item__link">
-        Kwissen
-      </a>
-    </li>
-    <li>
-      <a href="#" class="kw-anchor-light-bgr list-item__link">
-        Menu item 2
-      </a>
-    </li>
-    <li>
-      <a href="#" class="kw-anchor-light-bgr list-item__link">
-        Menu item 3
-      </a>
-    </li>
-    <li>
-      <a href="#" class="kw-anchor-light-bgr list-item__link">
-        Menu item 4
+    <li *ngFor="let menuItem of menuItems">
+      <a routerLink = '{{ menuItem.path }}' class="kw-anchor-light-bgr list-item__link">
+        <span class="icon-link">
+          <mat-icon
+            class="icon material-icons-outlined"
+            aria-hidden="false"
+            aria-label="list icon">
+            {{ menuItem.icon }}
+          </mat-icon>
+          <span>
+            {{ menuItem.name }}
+          </span>
+        </span>
       </a>
     </li>
   </ul>

@@ -1,0 +1,10 @@
+////////////////////////
+/// Global mixins
+//////////////////////
+
+@mixin g-button__icon {
+  display: flex;
+  flex-flow: row nowrap;
+  place-items: center;
+  gap: 0.5rem;
+}

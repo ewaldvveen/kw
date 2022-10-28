@@ -1,0 +1,15 @@
+////////////////////////
+/// Global mixins
+//////////////////////
+
+@mixin g-icon--default {
+  font-size: 22px;
+  width: 24px;
+  height: 22px;
+}
+
+@mixin g-icon--large {
+  font-size: 26px;
+  width: 26px;
+  height: 26px;
+}

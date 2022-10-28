@@ -3,7 +3,7 @@
 @import 'variables';
 
 .container {
-  @include g-typography__defaults;
+  @include g-typography--default;
   width: 100vw;
 }
 

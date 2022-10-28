@@ -34,6 +34,7 @@
             "stylePreprocessorOptions": {
               "includePaths": [
                 "src/app/styles/base",
+                "src/app/styles/components",
                 "src/app/styles/themes"
               ]
             }
@@ -108,6 +109,7 @@
             "stylePreprocessorOptions": {
               "includePaths": [
                 "src/app/styles/base",
+                "src/app/styles/components",
                 "src/app/styles/themes"
               ]
             }

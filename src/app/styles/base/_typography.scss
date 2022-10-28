@@ -2,9 +2,12 @@
 /// Global mixins
 //////////////////////
 
-@mixin g-typography__defaults {
+@mixin g-typography--default {
   font-size: 1.8rem;
-  color: hsla(0, 0%, 13%, 1);
+}
+
+@mixin g-typography--large {
+  font-size: 2.4rem;
 }
 
 @mixin g-typography__headings {
@@ -18,4 +21,8 @@
 
 @mixin g-typography__misc {
   font-family: 'Caveat', cursive;
+}
+
+@mixin g-typography__button--default {
+  font-size: 18px;
 }

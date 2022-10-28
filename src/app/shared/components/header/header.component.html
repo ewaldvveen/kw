@@ -19,17 +19,34 @@
     </a>
   </div>
   <div class="wrapper">
-    <a
-      href="#main-menu"
-      id="main-menu-toggle"
-      class="kw-anchor-light-bgr menu-toggle"
-      aria-label="Open main menu">
-      <mat-icon
-        aria-hidden="true"
-        aria-label="Hamburger menu icon"
-        fontIcon="menu">
-      </mat-icon>
-    </a>
-    <kw-menu></kw-menu>
+    <div class="button-wrapper">
+      <button [routerLink]="['/login']" mat-raised-button color="accent">
+        <span class="icon-button">
+          <span>
+            Inloggen
+          </span>
+          <mat-icon
+            class="icon"
+            aria-hidden="false"
+            aria-label="login icon"
+            fontIcon="account_circle">
+          </mat-icon>
+        </span>
+      </button>
+    </div>
+    <div class="wrapper">
+      <a
+        href="#main-menu"
+        id="main-menu-toggle"
+        class="kw-anchor-light-bgr menu-toggle"
+        aria-label="Open main menu">
+        <mat-icon
+          aria-hidden="true"
+          aria-label="Hamburger menu icon"
+          fontIcon="menu">
+        </mat-icon>
+      </a>
+      <kw-menu></kw-menu>
+  </div>
 </div>
 </mat-toolbar>

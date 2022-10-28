@@ -2,6 +2,8 @@
 @import 'layout';
 @import 'typography';
 @import 'variables';
+@import 'button';
+@import 'icon';
 
 h1 {
   @include g-screen-reader-only;
@@ -12,13 +14,28 @@ h1 {
 }
 
 .header-toolbar {
-  @include g-typography__defaults;
+  @include g-typography--default;
   justify-content: space-between;
 }
 
 .logo {
   width: 4.8rem;
   height: auto;
+}
+
+.button {
+  &-wrapper {
+    margin-right: 2rem;
+  }
+}
+
+.icon-button {
+  @include g-button__icon;
+  @include g-typography__button--default;
+}
+
+.mat-icon.icon {
+  @include g-icon--default;
 }
 
 .menu {

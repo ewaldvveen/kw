@@ -1,6 +1,20 @@
 @import 'general';
 @import 'layout';
+@import 'typography';
 @import 'variables';
+@import 'button';
+@import 'icon';
+
+.mat-icon.icon {
+  @include g-icon--large;
+}
+
+.icon {
+  &-link {
+    @include g-button__icon;
+    @include g-typography--large;
+  }
+}
 
 .menu {
   position: fixed;
@@ -51,6 +65,7 @@
 .list {
   @include g-list;
   @include g-flex-wrapper;
+  justify-content: center;
   align-items: center;
   row-gap: 2rem;
   min-height: 100%;

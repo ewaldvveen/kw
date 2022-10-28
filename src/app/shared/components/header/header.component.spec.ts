@@ -64,12 +64,5 @@ describe('HeaderComponent', () => {
 
       expect(toolbar).toBeDefined();
     });
-
-    it('should contain a hamburger mat-icon', async () => {
-      const iconHarness = await loader.getHarness<MatIconHarness>(MatIconHarness);
-      const icon = await iconHarness.getName();
-
-      expect(icon).toEqual('menu');
-    });
   });
 });
