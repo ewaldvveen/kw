@@ -1,7 +1,7 @@
 <mat-toolbar class="header-toolbar">
   <h1>kwisr.</h1>
   <div class="wrapper">
-    <a [routerLink]="['/home']" class="wrapper">
+    <a class="wrapper">
       <svg class="logo" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 800 800">
         <circle id="circle-large" cx="400" cy="400" r="400"/>
         <circle id="circle-medium" cx="400" cy="400" r="300"/>
@@ -20,7 +20,7 @@
   </div>
   <div class="wrapper">
     <div class="button-wrapper">
-      <button [routerLink]="['/login']" mat-raised-button color="accent">
+      <button mat-raised-button color="accent">
         <span class="icon-button">
           <span>
             Inloggen
@@ -39,6 +39,7 @@
         href="#main-menu"
         id="main-menu-toggle"
         class="kw-anchor-light-bgr menu-toggle"
+        (click)="OpenMenu()"
         aria-label="Open main menu">
         <mat-icon
           aria-hidden="true"

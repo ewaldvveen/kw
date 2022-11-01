@@ -79,6 +79,10 @@
       @include g-anchor;
       display: block;
       padding: 0.75em;
+
+      &:hover, &:active {
+        cursor: pointer;
+      }
     }
   }
 }

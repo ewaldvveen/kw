@@ -2,6 +2,7 @@
   <a
     href="#main-menu-toggle"
     class="kw-anchor-light-bgr menu__close"
+    (click)="CloseMenu()"
     aria-label="Close main menu">
     <mat-icon
     aria-hidden="true"
@@ -10,18 +11,58 @@
   </mat-icon>
   </a>
   <ul class="list">
-    <li *ngFor="let menuItem of menuItems; let last = last" class="list-item" [ngClass]="{ 'last-child': last }">
-      <a routerLink = '{{ menuItem.path }}' class="kw-anchor-light-bgr list-item__link">
+    <li class="list-item">
+      <a routerLink="/quizzes" class="kw-anchor-light-bgr list-item__link">
         <span class="icon-link">
           <mat-icon
             class="icon material-icons-outlined"
             aria-hidden="false"
-            aria-label="list icon">
-            {{ menuItem.icon }}
+            aria-label="play button icon">
+            play_circle
           </mat-icon>
-          <span>
-            {{ menuItem.name }}
-          </span>
+          <span>Kwisoverzicht</span>
+        </span>
+      </a>
+      <mat-divider class="divider"></mat-divider>
+    </li>
+    <li class="list-item">
+      <a routerLink="/home" class="kw-anchor-light-bgr list-item__link">
+        <span class="icon-link">
+          <mat-icon
+            class="icon material-icons-outlined"
+            aria-hidden="false"
+            aria-label="question mark icon">
+            help_outline
+          </mat-icon>
+          <span>Hoe werkt het?</span>
+        </span>
+      </a>
+      <mat-divider class="divider"></mat-divider>
+    </li>
+    <li class="list-item">
+      <a routerLink="/home" class="kw-anchor-light-bgr list-item__link">
+        <span class="icon-link">
+          <mat-icon
+            class="icon material-icons-outlined"
+            aria-hidden="false"
+            aria-label="information icon">
+            info
+          </mat-icon>
+          <span>Over kwisr.</span>
+        </span>
+      </a>
+      <mat-divider class="divider"></mat-divider>
+    </li>
+    <li class="list-item">
+      <a routerLink="/home" class="kw-anchor-light-bgr list-item__link">
+        <span class="icon-link">
+          <mat-icon
+            class="icon material-icons-outlined"
+            aria-hidden="false"
+            aria-label="@-sign icon">
+            alternate_email
+          </mat-icon>
+          <span>Contact</span>
         </span>
       </a>
       <mat-divider class="divider"></mat-divider>

@@ -2,18 +2,19 @@ import { LOCALE_ID, NgModule } from '@angular/core';
 import { registerLocaleData } from '@angular/common';
 import localeNl from '@angular/common/locales/nl';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { KwRouterModule } from './shared/kw.router.module';
+import { RouterModule } from '@angular/router';
 import { DefaultModule } from './default/default.module';
 import { QuizzesModule } from './quizzes/quizzes.module';
 import { UserModule } from './user/user.module';
 import { AppComponent } from './app.component';
+import { routeConfig } from './route.config';
 
 registerLocaleData(localeNl);
 
 @NgModule({
   imports: [
     BrowserAnimationsModule,
-    KwRouterModule,
+    RouterModule.forRoot(routeConfig),
     DefaultModule,
     QuizzesModule,
     UserModule
